@@ -13,6 +13,7 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView!
+    @IBOutlet var heartImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
