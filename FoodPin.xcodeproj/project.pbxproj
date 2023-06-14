@@ -15,6 +15,7 @@
 		E35E8EE52910243600EB303C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35E8EE42910243600EB303C /* Assets.xcassets */; };
 		E35E8EE82910243600EB303C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35E8EE62910243600EB303C /* LaunchScreen.storyboard */; };
 		E3654B09299D3F3D00AE8CCC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3654B08299D3F3D00AE8CCC /* Restaurant.swift */; };
+		E3F7FD1729F05A6300CFD228 /* RestaurantDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FD1629F05A6300CFD228 /* RestaurantDiffableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E35E8EE72910243600EB303C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E35E8EE92910243600EB303C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3654B08299D3F3D00AE8CCC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		E3F7FD1629F05A6300CFD228 /* RestaurantDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDiffableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E3654B08299D3F3D00AE8CCC /* Restaurant.swift */,
+				E3F7FD1629F05A6300CFD228 /* RestaurantDiffableDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				E3538B7329257B3800EBEA42 /* RestaurantTableViewCell.swift in Sources */,
 				E35E8EDC2910243300EB303C /* AppDelegate.swift in Sources */,
 				E35E8EDE2910243300EB303C /* SceneDelegate.swift in Sources */,
+				E3F7FD1729F05A6300CFD228 /* RestaurantDiffableDataSource.swift in Sources */,
 				E3538B712925594300EBEA42 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2QYH98J6A;
@@ -343,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brachialste.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2QYH98J6A;
@@ -372,6 +379,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brachialste.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
