@@ -15,6 +15,7 @@
 		E35E8EE52910243600EB303C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E35E8EE42910243600EB303C /* Assets.xcassets */; };
 		E35E8EE82910243600EB303C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E35E8EE62910243600EB303C /* LaunchScreen.storyboard */; };
 		E3654B09299D3F3D00AE8CCC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3654B08299D3F3D00AE8CCC /* Restaurant.swift */; };
+		E38BACC82A3A4F0200B45DD8 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38BACC72A3A4F0200B45DD8 /* RestaurantDetailViewController.swift */; };
 		E3F7FD1729F05A6300CFD228 /* RestaurantDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FD1629F05A6300CFD228 /* RestaurantDiffableDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		E35E8EE72910243600EB303C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E35E8EE92910243600EB303C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3654B08299D3F3D00AE8CCC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		E38BACC72A3A4F0200B45DD8 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		E3F7FD1629F05A6300CFD228 /* RestaurantDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDiffableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				E3538B702925594300EBEA42 /* RestaurantTableViewController.swift */,
+				E38BACC72A3A4F0200B45DD8 /* RestaurantDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				E35E8EDC2910243300EB303C /* AppDelegate.swift in Sources */,
 				E35E8EDE2910243300EB303C /* SceneDelegate.swift in Sources */,
 				E3F7FD1729F05A6300CFD228 /* RestaurantDiffableDataSource.swift in Sources */,
+				E38BACC82A3A4F0200B45DD8 /* RestaurantDetailViewController.swift in Sources */,
 				E3538B712925594300EBEA42 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

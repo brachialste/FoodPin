@@ -61,6 +61,9 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // large title in navigation bar
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.separatorStyle = .none
         tableView.dataSource = dataSource
@@ -73,55 +76,64 @@ class RestaurantTableViewController: UITableViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantItem = self.restaurants[indexPath.row]
+            }
+        }
+    }
+    
     // MARK: - UITableViewDelegate Protocol    
     
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        // get the selected restaurant
-        guard let restaurant = self.dataSource.itemIdentifier(for: indexPath) else {
-            return UISwipeActionsConfiguration()
-        }
-        
-        // delete action
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
-            
-            var snapshot = self.dataSource.snapshot()
-            snapshot.deleteItems([restaurant])
-            self.dataSource.apply(snapshot, animatingDifferences: true)
-            
-            // call completion handler to dismiss the action button
-            completionHandler(true)
-        }
-        
-        // share action
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
-            
-            let defaultText = "Just checking in at " + restaurant.name
-            let activityController: UIActivityViewController
-            
-            if let imageToShare = UIImage(named: restaurant.image) {
-                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-            } else {
-                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-            }
-            
-            self.present(activityController, animated: true, completion: nil)
-            completionHandler(true)
-        }
-        
-        // custom action icons
-        deleteAction.backgroundColor = UIColor.systemRed
-        deleteAction.image = UIImage(systemName: "trash")
-        
-        shareAction.backgroundColor = UIColor.systemOrange
-        shareAction.image = UIImage(systemName: "square.and.arrow.up")
-        
-        
-        // configure both actions as swipe action
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
-        
-        return swipeConfiguration
-    }
+//    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//        // get the selected restaurant
+//        guard let restaurant = self.dataSource.itemIdentifier(for: indexPath) else {
+//            return UISwipeActionsConfiguration()
+//        }
+//
+//        // delete action
+//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+//
+//            var snapshot = self.dataSource.snapshot()
+//            snapshot.deleteItems([restaurant])
+//            self.dataSource.apply(snapshot, animatingDifferences: true)
+//
+//            // call completion handler to dismiss the action button
+//            completionHandler(true)
+//        }
+//
+//        // share action
+//        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
+//
+//            let defaultText = "Just checking in at " + restaurant.name
+//            let activityController: UIActivityViewController
+//
+//            if let imageToShare = UIImage(named: restaurant.image) {
+//                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+//            } else {
+//                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+//            }
+//
+//            self.present(activityController, animated: true, completion: nil)
+//            completionHandler(true)
+//        }
+//
+//        // custom action icons
+//        deleteAction.backgroundColor = UIColor.systemRed
+//        deleteAction.image = UIImage(systemName: "trash")
+//
+//        shareAction.backgroundColor = UIColor.systemOrange
+//        shareAction.image = UIImage(systemName: "square.and.arrow.up")
+//
+//
+//        // configure both actions as swipe action
+//        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+//
+//        return swipeConfiguration
+//    }
 
 }
 
