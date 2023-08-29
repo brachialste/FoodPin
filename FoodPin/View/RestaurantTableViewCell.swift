@@ -12,12 +12,17 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var thumbnailImageView: UIImageView!
-    @IBOutlet var heartImageView: UIImageView!
-
+    @IBOutlet var thumbnailImageView: UIImageView! {
+        didSet {
+            thumbnailImageView.layer.cornerRadius = 20.0
+            thumbnailImageView.clipsToBounds = true
+        }
+    }
+    @IBOutlet var favoriteImageView: UIImageView! 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
         self.tintColor = .systemYellow
     }
 
@@ -26,5 +31,6 @@ class RestaurantTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 
 }
