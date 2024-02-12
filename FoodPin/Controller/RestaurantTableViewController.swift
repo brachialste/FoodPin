@@ -43,6 +43,20 @@ class RestaurantTableViewController: UITableViewController {
         // Enable large title for navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        if let appearance = navigationController?.navigationBar.standardAppearance {
+
+            appearance.configureWithTransparentBackground()
+
+            if let customFont = UIFont(name: "Nunito-Bold", size: 45.0){
+                appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!]
+                appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!, .font: customFont]
+            }
+
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
+        
         // Set up the data source of the table view
         tableView.dataSource = dataSource
         tableView.separatorStyle = .none
@@ -56,6 +70,15 @@ class RestaurantTableViewController: UITableViewController {
         
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
+        navigationItem.backButtonTitle = ""
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Enable large title for navigation bar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     // MARK: - UITableView Diffable Data Source
