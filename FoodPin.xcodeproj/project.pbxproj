@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3115D982AE984320066CCB0 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3115D972AE984320066CCB0 /* UIColor+Ext.swift */; };
+		E3115D9A2AE9A0330066CCB0 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3115D992AE9A0330066CCB0 /* NavigationController.swift */; };
 		E333DC042A9D33E000730A18 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E333DC022A9D33E000730A18 /* Nunito-Bold.ttf */; };
 		E333DC052A9D33E000730A18 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E333DC032A9D33E000730A18 /* Nunito-Regular.ttf */; };
 		E333DC072A9D482F00730A18 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333DC062A9D482F00730A18 /* RestaurantDetailHeaderView.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3115D972AE984320066CCB0 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		E3115D992AE9A0330066CCB0 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		E333DC022A9D33E000730A18 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		E333DC032A9D33E000730A18 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		E333DC062A9D482F00730A18 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3115D962AE983F10066CCB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3115D972AE984320066CCB0 /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E333DC002A9D333100730A18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		F48D55432536BAE700CE6DE4 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				E3115D962AE983F10066CCB0 /* Extensions */,
 				E333DC002A9D333100730A18 /* Resources */,
 				F4D1A1D3253DF94F00CCD3FA /* Storyboard */,
 				F4D1A1D2253DF93500CCD3FA /* Model */,
@@ -109,6 +122,7 @@
 			children = (
 				F48D555A2536BFE000CE6DE4 /* RestaurantTableViewController.swift */,
 				F4D1A1D82540370700CCD3FA /* RestaurantDetailViewController.swift */,
+				E3115D992AE9A0330066CCB0 /* NavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,9 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333DC092A9E72D500730A18 /* RestaurantDetailTextCell.swift in Sources */,
+				E3115D9A2AE9A0330066CCB0 /* NavigationController.swift in Sources */,
 				F4D1A1CE253D8C5600CCD3FA /* Restaurant.swift in Sources */,
 				F43B1C3625382DF300777A57 /* RestaurantTableViewCell.swift in Sources */,
 				F48D55452536BAE700CE6DE4 /* AppDelegate.swift in Sources */,
+				E3115D982AE984320066CCB0 /* UIColor+Ext.swift in Sources */,
 				E333DC0B2A9E7D4A00730A18 /* RestaurantDetailTwoColumnCell.swift in Sources */,
 				F48D55472536BAE700CE6DE4 /* SceneDelegate.swift in Sources */,
 				F4D1A1D6253EB90C00CCD3FA /* RestaurantDiffableDataSource.swift in Sources */,
@@ -373,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2QYH98J6A;
 				INFOPLIST_FILE = FoodPin/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2QYH98J6A;
 				INFOPLIST_FILE = FoodPin/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

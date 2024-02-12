@@ -14,10 +14,12 @@ class RestaurantDetailViewController: UIViewController {
 
     var restaurant: Restaurant = Restaurant()
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = false
         
         // Configure header view
         headerView.nameLabel.text = restaurant.name
@@ -32,8 +34,16 @@ class RestaurantDetailViewController: UIViewController {
         tableView.dataSource = self
 
         tableView.separatorStyle = .none
+        tableView.contentInsetAdjustmentBehavior = .never
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
 }
 
